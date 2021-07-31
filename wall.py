@@ -3,8 +3,9 @@ import os
 import ctypes
 import getinfo
 import getsub
+import time
 
-if __name__ == "__main__":
+def update():
     # Step 1: gets the amount of subs
     channel_id = getinfo.get_item('id')
     subs = getsub.returnsubs(channel_id)
@@ -23,3 +24,10 @@ if __name__ == "__main__":
     SPI_SETDESKWALLPAPER = 20
 
     ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, PATH, 3)
+
+if __name__ == "__main__":
+    while True:
+        update()
+        wait_time = 10
+        time.sleep(wait_time * 60)
+
