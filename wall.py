@@ -34,7 +34,7 @@ if __name__ == "__main__":
             with open("Error_Log.txt", "a") as f:
                 now = datetime.now()
                 dt_string = now.strftime("%Y/%m/%d %H:%M:%S")
-                f.write(dt_string + "An error has occured\n")
+                f.write(dt_string + " An error has occured\n")
         wait_time = 10
         time.sleep(wait_time * 60)
 
