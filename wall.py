@@ -4,6 +4,7 @@ import ctypes
 import getinfo
 import getsub
 import time
+from datetime import datetime
 
 def update():
     # Step 1: gets the amount of subs
@@ -27,7 +28,13 @@ def update():
 
 if __name__ == "__main__":
     while True:
-        update()
+        try:
+            update()
+        except:
+            with open("Error_Log.txt", "a") as f:
+                now = datetime.now()
+                dt_string = now.strftime("%Y/%m/%d %H:%M:%S")
+                f.write(dt_string + "An error has occured\n")
         wait_time = 10
         time.sleep(wait_time * 60)
 
