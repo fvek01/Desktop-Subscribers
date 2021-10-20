@@ -11,6 +11,11 @@ You will also need to get an API key from https://console.cloud.google.com/apis/
     Channel_Id=12345ABCDE
     API_Key=ExampleAPIKey12345
     PATH=C:\Users\Example\Documents\Folder
+    
+### Mistakes with notes.txt format
+
+- Dont put a space after equal sign
+- Make sure file location doesn't end in a forward slash
 
 ## Build
     git clone https://github.com/fvek01/Desktop-Subscribers
