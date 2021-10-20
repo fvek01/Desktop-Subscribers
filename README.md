@@ -16,7 +16,9 @@ You will also need to get an API key from https://console.cloud.google.com/apis/
 
 - Dont put a space after equal sign
 - Make sure file location doesn't end in a forward slash
-
+- If you want to check if you API key is active then you can test it using this:
+https://www.googleapis.com/youtube/v3/channels?part=statistics&id=CHANNELID&key=APIKEY
+where you fill in the API key and channel id instead.
 ## Build
     git clone https://github.com/fvek01/Desktop-Subscribers
     pip install -r requirements.txt
